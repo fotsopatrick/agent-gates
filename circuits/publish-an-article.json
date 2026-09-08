@@ -1,0 +1,21 @@
+{
+  "model": "publish-an-article",
+  "purpose": "Nothing reaches the public site without crossing these gates.",
+  "steps": [
+    { "sequence": 10, "gate": "draft-exists",
+      "condition": "The article file exists and is not empty.",
+      "refuses": "An empty file, or a title with no body." },
+    { "sequence": 20, "gate": "read-aloud",
+      "condition": "Every trade word is decoded where it appears.",
+      "refuses": "Jargon left naked. The reader should not need a second document." },
+    { "sequence": 30, "gate": "no-date-on-the-page",
+      "condition": "No publication date is printed in the body.",
+      "refuses": "A date, which makes a living article look stale in six months." },
+    { "sequence": 40, "gate": "reviewed-by-a-second-voice",
+      "condition": "A reviewer other than the author has signed off.",
+      "refuses": "Self-approval." },
+    { "sequence": 50, "gate": "owner-approves",
+      "condition": "The owner has seen the rendered page, not the file name.",
+      "refuses": "A link with no screenshot. Reading is not seeing." }
+  ]
+}

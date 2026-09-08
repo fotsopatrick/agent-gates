@@ -1,0 +1,20 @@
+{
+  "_comment": "Example wiring for Claude Code. Copy the hooks you want into your own ~/.claude/settings.json and fix the paths. PreToolUse runs before a tool call; UserPromptSubmit runs when you send a message; Stop runs when the agent wants to finish its turn. Exit code 2 refuses.",
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "bash /path/to/agent-gates/gates/rappel-six-ans.sh" } ] },
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/agent-gates/gates/marque-berzerk.py" } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Bash|Write|Edit",
+        "hooks": [ { "type": "command", "command": "python3 /path/to/agent-gates/gates/porte-secrets.py" } ] },
+      { "matcher": "Bash",
+        "hooks": [ { "type": "command", "command": "python3 /path/to/agent-gates/gates/garde-navigateur.py" } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/agent-gates/gates/garde-six-ans.py" } ] },
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/agent-gates/gates/garde-regarder-image.py" } ] },
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/agent-gates/gates/garde-reparer-tout-de-suite.py" } ] }
+    ]
+  }
+}

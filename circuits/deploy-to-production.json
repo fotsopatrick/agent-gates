@@ -1,0 +1,21 @@
+{
+  "model": "deploy-to-production",
+  "purpose": "Production is the one place where a mistake is not free.",
+  "steps": [
+    { "sequence": 10, "gate": "tests-green",
+      "condition": "The full test suite exits zero on a clean checkout.",
+      "refuses": "A suite that was never run, or run only on the author's machine." },
+    { "sequence": 20, "gate": "test-failed-first",
+      "condition": "The new test is proven to fail without the fix.",
+      "refuses": "A test that is green because it looks at the wrong thing." },
+    { "sequence": 30, "gate": "no-secret-in-the-diff",
+      "condition": "No credential appears in the change or its history.",
+      "refuses": "A key. If one is found, it is revoked, never hidden." },
+    { "sequence": 40, "gate": "rollback-exists",
+      "condition": "A one-command way back is written down and tested.",
+      "refuses": "A deploy whose undo is improvised under pressure." },
+    { "sequence": 50, "gate": "owner-approves",
+      "condition": "A human with authority says go.",
+      "refuses": "An agent deciding on its own that shipping is fine." }
+  ]
+}

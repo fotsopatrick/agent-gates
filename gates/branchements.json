@@ -1,0 +1,77 @@
+{
+ "_lisez_moi": "Ou chaque garde se branche. evenement = quand il tombe, outils = sur quels outils. Vide = tous.",
+ "branchements": {
+  "rappel-six-ans.sh": {
+   "evenement": "UserPromptSubmit",
+   "outils": ""
+  },
+  "garde-navigateur.py": {
+   "evenement": "PreToolUse",
+   "outils": "Bash"
+  },
+  "garde-code-publication.py": {
+   "evenement": "PreToolUse",
+   "outils": "Bash"
+  },
+  "garde-existant.py": {
+   "evenement": "PreToolUse",
+   "outils": "Write|Bash"
+  },
+  "garde-cockpit-commit.py": {
+   "evenement": "PreToolUse",
+   "outils": "Bash|Edit|Write|NotebookEdit|MultiEdit"
+  },
+  "garde-depots-concours.py": {
+   "evenement": "PreToolUse",
+   "outils": "Bash|Edit|Write|NotebookEdit|MultiEdit"
+  },
+  "garde-boite-noire.py": {
+   "evenement": "PreToolUse",
+   "outils": "Bash|Edit|Write|NotebookEdit|MultiEdit"
+  },
+  "garde-six-ans.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-bonne-nuit.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-regarder-image.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-rapport.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-donner-des-boutons.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-reparer-tout-de-suite.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-berzerk.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-texte-a-copier.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-tests.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-pas-ailleurs.py": {
+   "evenement": "Stop",
+   "outils": ""
+  },
+  "garde-cause.py": {
+   "evenement": "Stop",
+   "outils": ""
+  }
+ }
+}

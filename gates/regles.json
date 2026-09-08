@@ -1,0 +1,20 @@
+{
+ "_lisez_moi": "Vos regles a vous. Chaque garde lit ce fichier au demarrage. Effacez ce que vous ne voulez pas, ajoutez le votre.",
+ "dossiers_interdits": [
+  "~/mon-rendu-de-concours"
+ ],
+ "mots_interdits": [
+  "mon-secret-a-moi"
+ ],
+ "taille_minimale_article": 1500,
+ "dossiers_rendus": [
+  [
+   "~/mon-rendu-de-concours",
+   "un dossier deja rendu a un jury"
+  ]
+ ],
+ "depots_rendus": [
+  "moncompte/mon-projet-rendu"
+ ],
+ "seaux_rendus": []
+}

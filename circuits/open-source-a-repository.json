@@ -1,0 +1,21 @@
+{
+  "model": "open-source-a-repository",
+  "purpose": "Publishing a repository also publishes its whole past.",
+  "steps": [
+    { "sequence": 10, "gate": "no-secret-anywhere",
+      "condition": "No credential in any file, in any commit, ever.",
+      "refuses": "A repository whose history still holds a key." },
+    { "sequence": 20, "gate": "no-private-paths",
+      "condition": "No absolute path, hostname or private address of the author's machine.",
+      "refuses": "Code that can only run in one house." },
+    { "sequence": 30, "gate": "no-identical-copies",
+      "condition": "No file is byte-identical to another.",
+      "refuses": "Copy-paste, which drifts and reads as carelessness." },
+    { "sequence": 40, "gate": "claims-match-the-disk",
+      "condition": "Every promise in the README is checked by a script that runs on every push.",
+      "refuses": "A README claiming a build that does not exist." },
+    { "sequence": 50, "gate": "every-gate-has-a-test",
+      "condition": "Each gate ships with a test proving it refuses.",
+      "refuses": "A guard with no proof of refusal." }
+  ]
+}

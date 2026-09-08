@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.dernier-refus
+# fichiers poubelle crees par erreur
+/json
+/os
+/sys
+/subprocess
+/tempfile
+tests/json
+tests/os
+tests/sys
+tests/subprocess
+tests/tempfile
+*.avant-*
+__pycache__/

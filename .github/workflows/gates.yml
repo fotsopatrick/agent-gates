@@ -1,0 +1,16 @@
+# LE CONTROLE AUTOMATIQUE. Il tourne chez GitHub a chaque envoi de code.
+# Sans lui, le README pourrait promettre un audit que personne ne lance.
+name: gates
+on: [push, pull_request]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit the repository against its own claims
+        run: python3 verifier.py
+      - name: Every gate must refuse
+        run: bash tests/run-all.sh
